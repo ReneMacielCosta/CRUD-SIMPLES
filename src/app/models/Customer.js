@@ -6,11 +6,15 @@ class Customer extends Model {
        return super.init({
             name: DataTypes.STRING,
             email: DataTypes.STRING,
-           // status: Sequelize.ENUM("ACTIVE","ARCHIVED"),
+            status: DataTypes.ENUM("ACTIVE","ARCHIVED"),
         },
         {
             sequelize,
             modelName: "Customer",
+            name:{
+                singular:"customer",
+                plural:"customer",
+            },
         });
     } 
      static associate (models){

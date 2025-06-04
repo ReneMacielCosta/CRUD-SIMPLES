@@ -10,7 +10,12 @@ class User extends Model {
             status: Sequelize.ENUM("ACTIVE","ARCHIVED"),
         },
         {
-            sequelize
+            sequelize,
+            modelName: "User",
+            name:{
+                singular:"user",
+                plural:"users",
+            },
         });
     }
 }
